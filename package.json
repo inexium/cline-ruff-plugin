@@ -1,0 +1,38 @@
+{
+  "name": "cline-ruff-plugin",
+  "version": "0.1.0",
+  "description": "Cline plugin adding two tools: ruff_check (lint Python with Ruff) and ruff_format (format Python with Ruff).",
+  "type": "module",
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "README.md"
+  ],
+  "cline": {
+    "plugins": [
+      "./index.ts"
+    ]
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/plugin.test.ts"
+  },
+  "keywords": ["cline", "cline-plugin", "ruff", "python", "lint", "format"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "peerDependencies": {
+    "@cline/sdk": "*"
+  },
+  "peerDependenciesMeta": {
+    "@cline/sdk": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@cline/sdk": "^0.2.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  }
+}
